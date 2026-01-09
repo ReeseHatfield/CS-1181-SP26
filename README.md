@@ -1,11 +1,33 @@
 # CS-1181-SP26
 Class materials for CS-1181 in Spring 2026
 
-## Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
+
+## Table of Contents
+
+- [CS-1181-SP26](#cs-1181-sp26)
+- [Additional Resources](#additional-resources)
+  - [Practice Problems](#practice-problems)
+  - [Additional Learning Resources](#additional-learning-resources)
+  - [Continuing the Java Journey](#continuing-the-java-journey)
+  - [Non-English Explanations](#non-english-explanations)
+    - [Nepali](#nepali)
+    - [Hindi](#hindi)
+    - [Bengali](#bengali)
+    - [Marathi](#marathi)
+    - [Telugu](#telugu)
+    - [Tamil](#tamil)
+    - [Gujarati](#gujarati)
+    - [Urdu](#urdu)
+    - [Kannada](#kannada)
+    - [Odia](#odia)
+    - [Punjabi](#punjabi)
+- [Install Instructions](#install-instructions)
+  - [Java Install](#java-install)
+  - [IDE Install](#ide-install)
+    - [VSCode (MacOS)](#vscode-macos)
+    - [VSCode (Windows)](#vscode-windows)
+    - [IntelliJ](#intellij)
+
 
 ## Additional Resources
 **REMEMBER**, if you utilize these resources on projects or other submitted assignments, you still **MUST CITE** them.

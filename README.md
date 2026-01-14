@@ -6,6 +6,7 @@ Class materials for CS-1181 in Spring 2026
 
 - [CS-1181-SP26](#cs-1181-sp26)
 - [Additional Resources](#additional-resources)
+  - [Previous Semesters](#previous-semesters)
   - [Practice Problems](#practice-problems)
   - [Additional Learning Resources](#additional-learning-resources)
   - [Continuing the Java Journey](#continuing-the-java-journey)
@@ -20,6 +21,11 @@ Class materials for CS-1181 in Spring 2026
 
 ## Additional Resources
 **REMEMBER**, if you utilize these resources on projects or other submitted assignments, you still **MUST CITE** them.
+
+### Previous Semesters
+- [Fall 2025](https://github.com/ReeseHatfield/CS-1181-FA25)
+- [Summer 2025](https://github.com/ReeseHatfield/CS-1181-SU25)
+- [Spring 2025](https://github.com/ClarissaMilligan/CS-1181-SP25)
 
 ### Practice Problems
 

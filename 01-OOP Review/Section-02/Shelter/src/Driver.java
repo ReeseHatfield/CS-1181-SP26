@@ -16,6 +16,7 @@ public class Driver {
             System.out.println("true");
         }
 
+
         s.board(dog);
         s.board(cat);
         s.board(b1);

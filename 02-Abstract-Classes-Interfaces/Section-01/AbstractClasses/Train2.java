@@ -2,7 +2,7 @@ public class Train2 extends ModeOfTransportation2
 {
     public Train2(double speed, double pos)
     {
-        super(speed, pos);
+        super(pos, speed);
     }
 
     public void changeTrainSpeed(double newSpeed)
@@ -11,5 +11,10 @@ public class Train2 extends ModeOfTransportation2
         {
             super.setSpeed(newSpeed);
         }
+    }
+
+    public String toString()
+    {
+        return "Train: speed- " + super.getSpeed() + " position- " + super.getPosition();
     }
 }

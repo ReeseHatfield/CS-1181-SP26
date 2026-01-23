@@ -33,7 +33,7 @@ public class Airplane2 extends AerialVehicle2
 
     public String toString()
     {
-        return "Airplane: " + super.getSpeed();
+        return "Airplane: speed- " + super.getSpeed() + "position- " + super.getPosition();
     }
 
     @Override

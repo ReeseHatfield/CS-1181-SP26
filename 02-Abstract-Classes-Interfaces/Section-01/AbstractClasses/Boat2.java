@@ -7,6 +7,6 @@ public class Boat2 extends ModeOfTransportation2
 
     public String toString()
     {
-        return "Boat: " + super.getSpeed();
+        return "Boat: speed- " + super.getSpeed() + " position- " + super.getPosition();
     }
 }

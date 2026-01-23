@@ -150,6 +150,10 @@ Over the course of your education, it is a good idea to become familiar with bot
 4. Drag the VSCode Icon into your applications folder
 5. Launch VSCode
    * Select "Open" if MacOS asks "Are you sure you want to open this app downloaded from the internet?"
+6. In VSCode, go to Extensions, search for the WSU CSE extension
+    - This extension includes extensions for other languages you’ll find in future courses
+    - Link to extension: https://marketplace.visualstudio.com/items?itemName=WrightStateUniversity-ComputerScience.wsu-cse
+7. Restart VSCode in order for extensions to take effect
 
 #### VSCode (Windows)
 1. Navigate to [visualstudio.com](https://code.visualstudio.com/download)
@@ -162,6 +166,10 @@ Over the course of your education, it is a good idea to become familiar with bot
    - Leave the destination folder as the default, and click "Next"
    - Click "Install"
 5. Launch VSCode
+6. In VSCode, go to Extensions, search for the WSU CSE extension
+    - This extension includes extensions for other languages you’ll find in future courses
+    - Link to extension: https://marketplace.visualstudio.com/items?itemName=WrightStateUniversity-ComputerScience.wsu-cse
+7. Restart VSCode in order for extensions to take effect
 
 #### IntelliJ
 1. Navigate to [jetbrains.com](https://www.jetbrains.com/idea/download/?section=windows) to download IntelliJ.

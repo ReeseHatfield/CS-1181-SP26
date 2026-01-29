@@ -1,6 +1,7 @@
 
 // outer class
 public class User implements Comparable<User>{
+
     private String name;
     private int id; 
 
@@ -24,7 +25,9 @@ public class User implements Comparable<User>{
 
     @Override
     public String toString() {
-        return  name + ": id=" + id + " fav:" + this.favoriteNumber;
+        return "Name: " + this.name +
+            " ID: " + this.id +
+            " Fav Num: " + this.favoriteNumber;
     }
 
 

@@ -39,6 +39,9 @@ public class Driver {
         list.transformAll(e -> e * 2);
 
 
+        list.transformAll(e -> e * 2);
+
+
 
         System.out.println(list);
 

@@ -15,7 +15,7 @@ public class Box <T> {
 
 
     public String toString(){
-        return "Box containing: " + this.elem;
+        return "Box containing: " + this.elem.toString();
     }
     
 }

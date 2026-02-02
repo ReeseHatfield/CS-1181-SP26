@@ -35,6 +35,11 @@ public class Driver {
             return elem + 1;
         });
 
+
+        list.transformAll(e -> e * 2);
+
+
+
         System.out.println(list);
 
 

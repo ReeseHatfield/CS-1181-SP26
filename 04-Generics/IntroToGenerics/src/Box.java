@@ -12,3 +12,24 @@ public class Box<Type> {
         return this.element;
     }
 }
+
+
+/*
+ * if statements
+ * primitives
+ * booleans
+ * Math.abs()
+ * Math.*
+ * Class vs method
+ * modulus
+ * + -
+ * 
+ * = vs ==
+ * 
+ * !
+ * 
+ * double
+ * int
+ * float
+ * 
+ */

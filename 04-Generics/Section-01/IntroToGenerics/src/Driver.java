@@ -23,7 +23,7 @@ public class Driver {
         Pair<String, Integer> pair = new Pair<String,Integer>("hello world", 4);
 
 
-        Pair<Integer, Box<Box<Box<String>>>>> nestedBox= new Pair<>(6, new Box<String>("world"));
+        Pair<Integer, Box<String>> nestedBox= new Pair<>(6, new Box<String>("world"));
 
         System.out.println(nestedBox.unBox2());
     }

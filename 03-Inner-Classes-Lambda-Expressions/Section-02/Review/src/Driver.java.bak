@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class Driver {
+    public static void main(String[] args){
+        // comparable
+
+
+        ArrayList<Soda> list = new ArrayList<>();
+
+        
+        list.add(new Soda(1.0, "Bob"));
+        list.add(new Soda(3.5, "Charlie"));
+        list.add(new Soda(6.1, "Derek"));
+        list.add(new Soda(3.0, "Alice"));
+        
+        System.out.println(list);
+
+        Collections.sort(list, new SodaComparator());
+
+        System.out.println(list);
+
+
+        // declared type on the left
+        // actual type (runtime type) on the right
+
+        Student s1 = new Student();
+        Comumuter c = new Student();
+
+        s1.commute();
+        s1.goToClass();
+
+        c.commute();
+        // c.goToClass();
+
+        Person p1 = new Student();
+
+        p1.eatFood();
+
+
+        Student temp = (Student) p1;
+        temp.goToClass();
+
+        // ( (Student) p1).goToClass();
+
+
+    }
+
+    public void doThing(Comumuter c){
+        c.commute();
+    }
+
+}

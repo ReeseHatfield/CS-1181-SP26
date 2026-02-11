@@ -51,6 +51,7 @@ public class Driver {
 
 
 
+
         // initialize; conditional; modification
         for(int i = 0; i < 10; i ++){
 
@@ -61,6 +62,29 @@ public class Driver {
         for(Node<String> cur = n0; cur != null; cur = cur.next){
             System.out.println(cur.data);
         }
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        MyLinkedList<String> ll = new MyLinkedList<>();
+
+        ll.add("Alice");
+        ll.add("Bob");
+        ll.add("Charlie");
+        ll.add("Derek");
+        ll.add("Eli");
+
+        // ll.printList();
+
+        ll.remove("Hello");
+
+        ll.printList();
+        // ll.remove("Charlie");
+
+        // System.out.println(ll.get(4));
 
 
         // Node<Integer> n3 = new Node<>(5);

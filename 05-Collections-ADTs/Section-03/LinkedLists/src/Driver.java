@@ -79,7 +79,7 @@ public class Driver {
 
         // ll.printList();
 
-        ll.remove("Hello");
+        ll.remove("Alice");
 
         ll.printList();
         // ll.remove("Charlie");

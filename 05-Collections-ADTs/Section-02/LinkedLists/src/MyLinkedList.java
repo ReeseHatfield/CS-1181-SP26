@@ -95,5 +95,32 @@ public class MyLinkedList<T> {
 
     }
 
+    public void insertAtIndex(int index, T addMe){
+
+        Node<T> newNode = new Node<>(addMe);
+
+        if(index == 0){
+            newNode.next = this.head;
+
+            this.head = newNode;
+            return;
+        }
+
+
+
+
+        Node<T> cur = this.head;
+        for(int i = 0; i < index - 1; i++){
+            cur = cur.next;
+        }
+
+        // moved cur to one before where we need
+
+        newNode.next = cur.next;
+        cur.next = newNode;
+
+
+    }
+
 
 }

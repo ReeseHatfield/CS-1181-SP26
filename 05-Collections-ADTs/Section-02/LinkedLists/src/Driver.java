@@ -1,10 +1,10 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Driver {
     public static void main(String[] args) {
         // List<String> list = new LinkedList<>();
+
+        // ArrayList<String> temp = new ArrayList<>();
 
         // list.add("Hello");
         // list.add("World");
@@ -55,10 +55,41 @@ public class Driver {
         ll.add("Eli");
 
 
+        
         // ll.printList();
 
-        ll.remove("Alice");
+        ll.insertAtIndex(1, "Reese");
+
+        // ll.remove("Alice");
         ll.printList();
+
+        System.out.println();
+        System.out.println();
+
+        Stack<String> myStack = new Stack<>();
+
+        myStack.push("Hello");
+        myStack.push("World");
+        myStack.push("My");
+        myStack.push("Name");
+        myStack.push("is");
+        myStack.push("Reese");
+
+
+        String temp = myStack.pop();
+
+
+
+
+        System.out.println(myStack.peek());
+
+        System.out.println(myStack);
+
+        while(!myStack.isEmpty()){
+            System.out.println(myStack.pop());
+        }
+
+        System.out.println("Printing the stack: " + myStack);
 
     }
 }

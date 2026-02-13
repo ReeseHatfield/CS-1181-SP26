@@ -60,5 +60,23 @@ public class Driver {
 
         
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        MyLinkedList<String> ll = new MyLinkedList<>();
+        ll.add("Alice");
+        ll.add("Bob");
+        ll.add("Charlie");
+        ll.add("Derek");
+        ll.add("Eli");
+
+        ll.remove("Alice");
+        ll.printList();
+
+
+        // System.out.println();
+
+        // System.out.println(ll.get(0));
     }
 }

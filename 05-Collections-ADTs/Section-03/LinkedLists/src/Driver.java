@@ -79,7 +79,9 @@ public class Driver {
 
         // ll.printList();
 
-        ll.remove("Alice");
+        // ll.remove("Alice");
+
+        ll.insertAtIndex(1, "Reese");
 
         ll.printList();
         // ll.remove("Charlie");
@@ -88,6 +90,38 @@ public class Driver {
 
 
         // Node<Integer> n3 = new Node<>(5);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        Stack<String> s = new Stack<>();
+
+        // LIFO
+        s.push("Hello");
+        s.push("World");
+        s.push("My");
+        s.push("Name");
+        s.push("Is");
+        s.push("Reese");
+
+        String topOfStack = s.pop();
+
+        System.out.println(s);
+
+        System.out.println(topOfStack);
+
+        System.out.println(s.peek());
+        System.out.println(s);
+
+        while(!s.isEmpty()){
+            String curTop = s.pop();
+            System.out.println(curTop);
+        }
+
+        System.out.println(s);
+
+        
 
     }
 }

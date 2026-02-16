@@ -86,4 +86,34 @@ public class MyLinkedList<T> {
         cur.next = cur.next.next;
 
     }
+
+
+    public void insertAtIndex(int index, T thingToAdd){
+        Node<T> addMe = new Node<>(thingToAdd);
+
+        if(index == 0){
+
+            addMe.next = this.head;
+
+            this.head = addMe;
+
+            return;
+        }
+
+        Node<T> cur = this.head;
+
+        for(int i = 0; i < index - 1; i ++){
+            cur = cur.next;
+        }
+
+
+        // cur.next = addMe;
+
+        addMe.next = cur.next;
+
+        cur.next = addMe;
+
+
+
+    }
 }

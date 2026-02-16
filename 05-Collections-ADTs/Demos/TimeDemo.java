@@ -27,8 +27,6 @@ public class TimeDemo {
     public static double timeInsertAtBegining(List<String> l, int numInsertions){
 
         long startTime = System.currentTimeMillis();
-        Random rng = new Random();
-
 
         for(int i = 0; i < numInsertions; i++){
 

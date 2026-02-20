@@ -22,6 +22,27 @@ public class MyLinkedList<T> {
 
     }
 
+    public void insert(int index, T item) {
+        Node<T> cur = this.head;
+        Node<T> newNode = new Node<>(item);
+
+        if (index == 0) {
+            newNode.next = head;
+            this.head = newNode;
+        } else {
+
+            for (int i = 0; i < index; i++)
+            {
+                if (i == (index - 1))
+                {
+                    newNode.next = cur.next;
+                    cur.next = newNode;
+                }
+                cur = cur.next;
+            }
+        }
+    }
+
     public void printList(){
         Node<T> cur = this.head;
 

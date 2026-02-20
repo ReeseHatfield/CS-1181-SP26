@@ -74,6 +74,11 @@ public class Driver {
         ll.remove("Alice");
         ll.printList();
 
+        System.out.println();
+
+        ll.insert(0, "Clarissa");
+        ll.printList();
+
 
         // System.out.println();
 

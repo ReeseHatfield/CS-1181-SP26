@@ -3,11 +3,13 @@ public class Customer implements Comparable<Customer>
     public enum Priority {CARRY_OUT, IN_PERSON, DOORDASH};
     private Priority customerPriority = Priority.IN_PERSON;
     private int id = 0;
+    private String order = "";
 
-    public Customer(int id, Priority p)
+    public Customer(int id, Priority p, String order)
     {
         this.id = id;
         customerPriority = p;
+        this.order = order;
     }
 
     @Override
@@ -39,5 +41,15 @@ public class Customer implements Comparable<Customer>
     public String toString()
     {
         return "Customer #" + id + ": " + customerPriority;
+    }
+
+    public String getOrder()
+    {
+        return order;
+    }
+
+    public int getId()
+    {
+        return id;
     }
 }

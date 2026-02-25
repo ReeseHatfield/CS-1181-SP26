@@ -1,4 +1,4 @@
-public class Car<T extends Item> extends Object implements Drivable {
+public class Car<T extends Comparable<T>> extends Object implements Drivable {
 
     private T owner;
 
@@ -13,7 +13,7 @@ public class Car<T extends Item> extends Object implements Drivable {
 
 
     public void popTire(){
-        this.owner.getWeight();
+        this.owner.compareTo(owner);
     }
     
 }

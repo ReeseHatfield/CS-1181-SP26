@@ -71,7 +71,6 @@ Topics include:
 1. Since java doesn't have multi-inheritance, we often use _____ instead
     - Interfaces
 
-
 1. What type of copy is being made in this example
     ```java
     public class Container {

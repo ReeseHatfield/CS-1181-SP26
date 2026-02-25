@@ -1,6 +1,6 @@
-public class Item {
+public class Item implements Comparable<Item>{
     private String name;
-    private double weight;
+    private Double weight;
 
     public Item(String name, double weight){
         this.name = name;
@@ -10,5 +10,16 @@ public class Item {
     public Item(Item other){
         this.name = other.name;
         this.weight = other.weight;
+    }
+
+    @Override
+    public int compareTo(Item other) {
+        return other.weight.compareTo(this.weight);
+    }
+
+
+    @Override
+    public String toString(){
+        return this.name + ": " + this.weight;
     }
 }

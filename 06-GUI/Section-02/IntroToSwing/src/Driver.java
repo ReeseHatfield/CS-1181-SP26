@@ -34,9 +34,15 @@ public class Driver {
         root.add(welcomeLabel);
 
 
+        JColorChooser chooser = new JColorChooser();
+        root.add(chooser);
+
+
         JButton btn = new JButton("My First JButton");
         // btn.addActionListener(new ButtonPressedAction());
         btn.addActionListener((e) -> {
+
+
 
             
             System.out.println("I was called from a lambda");
@@ -58,6 +64,14 @@ public class Driver {
             for(int i = 0; i < 10; i ++){
                 
                 JFrame f = new JFrame();
+
+                JButton backgroundBtn = new JButton();
+
+                Color selected = chooser.getColor();
+
+                backgroundBtn.setBackground(selected);
+                f.add(backgroundBtn);
+                
                 Random rng = new Random();
     
                 f.setLocation(rng.nextInt(0, 1000), rng.nextInt(0, 1000));
@@ -67,10 +81,13 @@ public class Driver {
 
 
         });
+
+        
         root.add(btn);
-
-
-
+        
+        
+        
+        
 
 
         frame.setContentPane(root);

@@ -11,5 +11,7 @@ public class Driver {
         
         Calculator c = new Calculator("My GUI Calculator");
 
+        System.out.println("Reached end of main!");
+
     }
 }

@@ -1,4 +1,4 @@
-public class Driver {
+public class GUIDriver {
     public static void main(String[] args){
 
         FontAdjuster.adjustFontSize(20);

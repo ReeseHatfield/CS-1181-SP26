@@ -1,6 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
+
+// practice with keylisteners
+// practice putting images on buttons
+// pop-up windows
 public class MyFrame extends JFrame
 {
     private int clickCount = 0;
@@ -19,6 +23,20 @@ public class MyFrame extends JFrame
         contentPanel.add(clickMe);
 
         JButton newButton = new JButton("I am a new button!!!");
+        newButton.addActionListener(e -> {
+            try
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Thread.sleep(1000);
+                    ((JButton) e.getSource()).setText("#" + i);
+                }
+            }
+            catch (InterruptedException ie)
+            {
+                System.out.println(ie.getStackTrace());
+            }
+        });
         contentPanel.add(newButton);
 
         addTenButtons();

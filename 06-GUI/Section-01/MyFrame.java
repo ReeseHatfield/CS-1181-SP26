@@ -8,13 +8,17 @@ import java.awt.*;
 public class MyFrame extends JFrame
 {
     private int clickCount = 0;
-    private JPanel contentPanel = new JPanel();
+    private DrawingPanel contentPanel = new DrawingPanel();
+    private Timer newButtonTimer;
+    private JButton newButton;
+    private JButton clickMe;
+    private int i = 1;
 
     public MyFrame(String frameTitle)
     {
         super(frameTitle);
 
-        JButton clickMe = new JButton("Click me!");
+        clickMe = new JButton("Click me!");
         clickMe.setSize(100, 100);
         //clickMe.setPreferredSize(new Dimension(100, 100));
         clickMe.addActionListener(e -> {
@@ -22,26 +26,46 @@ public class MyFrame extends JFrame
         });
         contentPanel.add(clickMe);
 
-        JButton newButton = new JButton("I am a new button!!!");
+        newButton = new JButton("I am a new button!!!");
         newButton.addActionListener(e -> {
-            try
-            {
-                for (int i = 0; i < 10; i++)
+            newButtonTimer = new Timer(1000, timedEvent -> {
+                if (i <= 10)
                 {
-                    Thread.sleep(1000);
                     ((JButton) e.getSource()).setText("#" + i);
+                    i++;
+                    ((JButton) e.getSource()).setEnabled(false);
                 }
-            }
-            catch (InterruptedException ie)
-            {
-                System.out.println(ie.getStackTrace());
-            }
+                else
+                {
+                    newButtonTimer.stop();
+                    i = 1;
+                    ((JButton) e.getSource()).setEnabled(true);
+                }
+            });
+            newButtonTimer.start();
+//            try
+//            {
+//                for (int i = 1; i <= 10; i++)
+//                {
+//                    Thread.sleep(1000);
+//                    ((JButton) e.getSource()).setText("#" + i);
+//                }
+//            }
+//            catch (InterruptedException ie)
+//            {
+//                System.out.println(ie.getStackTrace());
+//            }
         });
         contentPanel.add(newButton);
 
         addTenButtons();
 
         this.add(contentPanel);
+    }
+
+    public void animate()
+    {
+        contentPanel.animate();
     }
 
     public void addTenButtons()

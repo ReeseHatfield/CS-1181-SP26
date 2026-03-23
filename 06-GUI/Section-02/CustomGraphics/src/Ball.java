@@ -2,8 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class Ball extends JComponent implements KeyListener{
+public class Ball extends JComponent implements KeyListener, MouseListener {
 
     private int x = 33;
     private int y = 52;
@@ -18,15 +20,19 @@ public class Ball extends JComponent implements KeyListener{
     private int parentHeight;
     private int parentWidth;
 
+
+
     public Ball(int parentWidth, int parentHeight){
 
         this.parentHeight = parentHeight;
         this.parentWidth = parentWidth;
 
+        this.addMouseListener(this);
+
         this.setFocusable(true);
-        this.addKeyListener(this);
+        // this.addKeyListener(this);
         this.requestFocus();
-        this.animate();
+        // this.animate();
     }
 
     public void animate(){
@@ -92,5 +98,34 @@ public class Ball extends JComponent implements KeyListener{
 
     @Override
     public void keyTyped(KeyEvent arg0) {
+    }
+
+    private boolean isOnTopOf = false;
+
+
+    @Override
+    public void mouseClicked(MouseEvent me) {
+        if(isOnTopOf){
+            System.out.println("Clicked");
+        }
+    }
+
+
+    @Override
+    public void mouseEntered(MouseEvent arg0) {
+        this.isOnTopOf = true;
+    }
+
+    @Override
+    public void mouseExited(MouseEvent arg0) {
+        this.isOnTopOf = false;
+    }
+
+    @Override
+    public void mousePressed(MouseEvent arg0) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent arg0) {
     }
 }

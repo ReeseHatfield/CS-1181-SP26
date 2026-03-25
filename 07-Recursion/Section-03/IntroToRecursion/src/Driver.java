@@ -41,6 +41,6 @@ public class Driver {
     public static void baz() throws FileNotFoundException{
         // throw new RuntimeException();
 
-        new Scanner(new File("hello"));
+        new Scanner(new File("does not exist"));
     }
 }

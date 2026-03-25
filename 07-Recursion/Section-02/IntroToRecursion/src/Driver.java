@@ -11,8 +11,37 @@ public class Driver {
         // }
 
 
-        doThing(0);
+        // doThing(0);
+        // int occurrences = CountOccurrences.countOccurrences("null", 'l');
+
+        // System.out.println(occurrences);
+
+
+        for(int i = 0; i < 100; i ++){
+
+            System.out.println(fibN(i));
+        }
+
     }
+
+    // 1 1 2 3 5 ...
+
+    public static int fibN(int n){
+        if(n == 0){
+            return 1;
+        }
+
+        if (n == 1){
+            return 1;
+        }
+
+
+        return fibN(n - 1) + fibN(n - 2);
+
+
+    }
+
+    
 
 
     public static void doThing(int timesRan){
@@ -28,11 +57,21 @@ public class Driver {
     }
 
 
-    public static int countOccurrences(String s, char c){
+    // public static int countOccurrences(String s, char target){
+    //     if(s.isEmpty()){
+    //         return 0;
+    //     }
+
+    //     char first = s.charAt(0);
 
         
-        return 0;
-    }
+    //     if(first == target){
+    //         return 1 + countOccurrences(s.substring(1), target);
+    //     } else {
+    //         return 0 + countOccurrences(s.substring(1), target);
+    //     }
+
+    // }
 
 
 

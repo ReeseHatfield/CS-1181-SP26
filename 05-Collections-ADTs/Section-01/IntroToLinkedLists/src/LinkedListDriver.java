@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Driver {
+public class LinkedListDriver {
     public static void main(String[] args){
         int[] arr = new int[5];
 

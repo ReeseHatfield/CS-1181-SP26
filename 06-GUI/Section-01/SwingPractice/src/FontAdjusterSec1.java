@@ -10,7 +10,7 @@ import javax.swing.UIManager;
 import java.awt.Font;
 import java.util.Enumeration;
 
-public class FontAdjuster {
+public class FontAdjusterSec1 {
 
     public static void adjustFontSize(int adjustment) {
         Enumeration<Object> keys = UIManager.getDefaults().keys();

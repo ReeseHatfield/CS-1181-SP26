@@ -9,8 +9,43 @@ public class Driver {
         //     e.printStackTrace();
         // }
 
-        doThing(0);
+        // System.out.println(Counter.countOccurrences("Hellolololooo", 'h'));
+
+
+        for(int i = 0; i < 100; i ++){
+            
+            System.out.println(fibN(i));
+        }
     }
+
+    /**
+     * 
+     * @param timesRans
+     * @return Nth fib. number
+     */
+    public static int fibN(int n){
+
+        if(n == 0){
+            return 1;
+        }
+
+        if(n == 1){
+            return 1;
+        }
+
+        return fibN(n - 1) + fibN(n - 2);
+    }
+
+    // cur
+    // prev
+    // prevprev
+    // cur + prev + prevprevious
+    
+
+
+    
+
+
 
 
     public static void doThing(int timesRans){

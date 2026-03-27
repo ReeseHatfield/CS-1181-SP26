@@ -17,12 +17,120 @@ public class Driver {
         // System.out.println(occurrences);
 
 
-        for(int i = 0; i < 100; i ++){
+        // for(int i = 0; i < 100; i ++){
 
-            System.out.println(fibN(i));
-        }
+        //     System.out.println(fibN(i));
+        // }
+
+
+        // System.out.println(endX("xReexsxex", 0));
+
+        printTriangle(30);
 
     }
+
+    public static void printTriangle(int height){
+        // base case
+
+        if(height == 1){
+            System.out.println("*");
+            return;
+        }
+
+        // work
+        printChars('*', height);
+        System.out.println();
+
+        // simplifciation step
+        printTriangle(height - 1);
+    }
+
+
+    public static void printChars(char c, int charsLeft){
+        if(charsLeft <= 0){
+            return;
+        }
+
+        System.out.print(c + " ");
+
+        printChars(c, charsLeft - 1);
+    }
+
+
+
+    public static String removeX(String input){
+        // not use any kind of loops
+        // "" -> ""
+        if(input.isEmpty()){
+            return input;
+        }
+
+        char first = input.charAt(0);
+        String remaining = input.substring(1);
+
+        if(first == 'x'){
+            return removeX(remaining);
+        }
+        else {
+            // recombination
+            return first + removeX(remaining);
+        }
+    }
+
+    public static String endX(String input){
+
+        if(input.isEmpty()){
+            return input;
+        }
+
+        char first = input.charAt(0);
+        String remaining = input.substring(1);
+
+        if(first == 'x'){
+            return endX(remaining) + first;
+        }
+        else {
+            return first + endX(remaining);
+        }
+
+
+    }
+
+    public static String endX(String input, int foundXs){
+        if(input.length() == 0){
+            
+            // "e" -> "e"
+            // "x" -> "x" 
+
+            // for(int i = 0; i < foundXs; i++){
+            //     input += "x";
+            // }
+
+
+
+            return appendX(input, foundXs);
+            
+        }
+
+        if(input.charAt(0) == 'x'){
+            return endX(input.substring(1), foundXs + 1);
+        }
+        else {
+            return input.charAt(0) + endX(input.substring(1), foundXs);
+        }
+
+
+    }
+
+    public static String appendX(String input, int xsToAppend){
+        if(xsToAppend <= 0){
+            return input;
+        }
+
+        return appendX(input, xsToAppend - 1) + 'x';
+    }
+
+
 
     // 1 1 2 3 5 ...
 

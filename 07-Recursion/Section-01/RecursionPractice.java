@@ -14,6 +14,10 @@ public class RecursionPractice
         System.out.println(findMax(locations));
         System.out.println(findMax(nums));
         System.out.println(findMax(gpas));
+        System.out.println(permute("four"));
+        System.out.println(permute("cat"));
+        System.out.println(permute("a"));
+        System.out.println(permute(""));
     }
 
     public static String reverseWord(String word)
@@ -77,4 +81,29 @@ public class RecursionPractice
         }
         return firstElement;
     }
+
+    public static ArrayList<String> permute(String word) {
+        ArrayList<String> plist = new ArrayList<>();
+        if (word.isEmpty())
+        {
+            return plist;
+        }
+        else if (word.length() == 1)
+        {
+            plist.add(word);
+            return plist;
+        }
+        for (int i = 0; i < word.length(); i++)
+        {
+            String letter = Character.toString(word.charAt(i));
+            String wordMinusLetter = word.substring(0, i) + word.substring(i + 1);
+            ArrayList<String> permutations = permute(wordMinusLetter);
+            for (String permutation : permutations)
+            {
+                plist.add(letter + permutation);
+            }
+        }
+        return plist;
+    }
+
 }

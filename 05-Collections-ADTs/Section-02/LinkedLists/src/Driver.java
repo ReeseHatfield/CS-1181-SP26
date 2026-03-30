@@ -53,43 +53,45 @@ public class Driver {
         ll.add("Charlie");
         ll.add("Derek");
         ll.add("Eli");
+        ll.insertAtIndexRec(2, "Reese");
+        ll.printList();
 
 
         
         // ll.printList();
 
-        ll.insertAtIndex(1, "Reese");
+        // ll.insertAtIndex(1, "Reese");
 
-        // ll.remove("Alice");
-        ll.printList();
+        // // ll.remove("Alice");
+        // ll.printList();
 
-        System.out.println();
-        System.out.println();
+        // System.out.println();
+        // System.out.println();
 
-        Stack<String> myStack = new Stack<>();
+        // Stack<String> myStack = new Stack<>();
 
-        myStack.push("Hello");
-        myStack.push("World");
-        myStack.push("My");
-        myStack.push("Name");
-        myStack.push("is");
-        myStack.push("Reese");
-
-
-        String temp = myStack.pop();
+        // myStack.push("Hello");
+        // myStack.push("World");
+        // myStack.push("My");
+        // myStack.push("Name");
+        // myStack.push("is");
+        // myStack.push("Reese");
 
 
+        // String temp = myStack.pop();
 
 
-        System.out.println(myStack.peek());
 
-        System.out.println(myStack);
 
-        while(!myStack.isEmpty()){
-            System.out.println(myStack.pop());
-        }
+        // System.out.println(myStack.peek());
 
-        System.out.println("Printing the stack: " + myStack);
+        // System.out.println(myStack);
+
+        // while(!myStack.isEmpty()){
+        //     System.out.println(myStack.pop());
+        // }
+
+        // System.out.println("Printing the stack: " + myStack);
 
     }
 }

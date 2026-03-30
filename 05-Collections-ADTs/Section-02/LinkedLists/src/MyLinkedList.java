@@ -122,5 +122,23 @@ public class MyLinkedList<T> {
 
     }
 
+    public void insertAtIndexRec(int index, T addMe){
+        insertAtIndexRec(index - 1 , addMe, this.head, 0);
+    }
+
+    private void insertAtIndexRec(int index, T addMe, Node<T> cur, int timesMoved){
+        if(timesMoved == index){
+            Node<T> newNode = new Node<T>(addMe);
+            newNode.next = cur.next;
+            cur.next = newNode;
+
+            return;
+        }
+
+
+        insertAtIndexRec(index, addMe, cur.next, timesMoved + 1);
+
+    }
+
 
 }

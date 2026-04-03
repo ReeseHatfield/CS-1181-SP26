@@ -20,6 +20,11 @@ public class MyFrame extends JFrame
 
         clickMe = new JButton("Click me!");
         clickMe.setSize(100, 100);
+
+        class MyListener implements ActionListener{
+
+        }
+
         //clickMe.setPreferredSize(new Dimension(100, 100));
         clickMe.addActionListener(e -> {
             System.out.println("I have been clicked " + ++clickCount + " number of times!");

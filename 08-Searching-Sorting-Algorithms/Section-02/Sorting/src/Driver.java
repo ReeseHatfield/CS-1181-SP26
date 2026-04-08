@@ -6,6 +6,28 @@ import java.util.Random;
 public class Driver {
     public static void main(String[] args) {
 
+
+        // swap
+        int a = 5;
+        int b = 10;
+
+        // int temp = a;
+        // a = b; // 10
+        // b = temp; // 5
+
+        a = a + b; // a = 15
+        b = a - b; // b = 15 - 10 = 5
+        a = a - b; // a = 15 - 5 = 10
+
+        // a = 10
+        //  b = 5
+
+
+        // Collections.swap(null, a, b);
+
+
+
+
         List<Integer> nums = new ArrayList<>();
         fillWithRandom(nums);
         System.out.println("Unsorted:");
@@ -13,7 +35,7 @@ public class Driver {
         System.out.println();
 
         System.out.println("Sorted:");
-        nums = bubbleSort(nums);
+        nums = mergeSort(nums);
         System.out.println(nums);
     
     }
@@ -43,6 +65,9 @@ public class Driver {
     }
 
 
+
+
+
     public static void fillWithRandom(List<Integer> list){
 
         Random rng = new Random();
@@ -50,6 +75,22 @@ public class Driver {
         for(int i = 0; i < 100; i++) {
             list.add(rng.nextInt(0, 100));
         }
+    }
+
+    // O(n * logn)
+    public static List<Integer> mergeSort(List<Integer> list){
+        if(list.size() <= 1){
+            return list;
+        }
+
+        int middle = list.size() / 2;
+        List<Integer> left = new ArrayList<>(list.subList(0, middle));
+        List<Integer> right = new ArrayList<>(list.subList(middle, list.size()));
+
+        left = mergeSort(left);
+        right = mergeSort(right);
+
+        return merge(left, right);
     }
 
 

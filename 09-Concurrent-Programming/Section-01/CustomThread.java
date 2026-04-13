@@ -16,7 +16,16 @@ public class CustomThread extends Thread
     {
         for (long i = min; i <= max; i++)
         {
-            //System.out.println("THREAD #" + id + ": " + i);
+            // System.out.println("THREAD #" + id + ": " + i);
+
+            try
+            {
+                Thread.sleep(250);
+            }
+            catch (InterruptedException ie)
+            {
+                System.out.println("ow");
+            }
         }
     }
 }

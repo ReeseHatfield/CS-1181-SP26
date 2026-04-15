@@ -20,7 +20,7 @@ public class CustomThread extends Thread
 
             try
             {
-                Thread.sleep(250);
+                Thread.sleep(1);
             }
             catch (InterruptedException ie)
             {

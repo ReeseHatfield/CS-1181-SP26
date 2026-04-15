@@ -2,7 +2,7 @@ public class ThreadIntro
 {
     public static void main(String[] args) throws InterruptedException
     {
-        final int NUM_THREADS = 2;
+        final int NUM_THREADS = 8;
         long countTo = 947293;
         CustomThread[] threads = new CustomThread[NUM_THREADS];
         long blockSize = countTo / NUM_THREADS;

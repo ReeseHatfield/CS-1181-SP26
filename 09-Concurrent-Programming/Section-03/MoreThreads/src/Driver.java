@@ -11,7 +11,7 @@ public class Driver {
     public static final int NUM_THREADS = 3;
     public static void main(String[] args) throws Exception {
         
-        // writeWithRandom();
+        // writeWithRandom();x
 
         for(int i = 0; i < NUM_THREADS; i++){
             Files.copy(Path.of("nums.txt"), Path.of("nums-" + i + ".txt"));

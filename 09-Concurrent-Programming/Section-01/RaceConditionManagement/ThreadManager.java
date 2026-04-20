@@ -1,13 +1,20 @@
-import javax.crypto.spec.PSource;
-
 public class ThreadManager
 {
     private int[] work = {4, 8, 14, 8, 9, 3, 6, 1, 5, 11, 2};
     private int nextJob = 0;
 
-    public int getNextJob()
+    public synchronized int getNextJob()
     {
         int jobWorkIndex = -1;
+
+        try
+        {
+            Thread.sleep(1);
+        }
+        catch (InterruptedException ie)
+        {
+            System.out.println("oops");
+        }
 
         if (hasNextJob())
         {

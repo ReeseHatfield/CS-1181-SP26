@@ -30,7 +30,6 @@ public class ParList<T> {
                 int jobsPerThread = this.list.size() / numThreads;
                 int start = jobsPerThread * threadIndexCopy;
                 int end = (threadIndexCopy == numThreads - 1) ? list.size() : start + jobsPerThread; 
-
                 for(int i = start; i < end; i++){
                     T transformed = f.apply(list.get(i));
                     list.set(i, transformed);
@@ -46,11 +45,10 @@ public class ParList<T> {
         //     threads.get(i).join();
         // }
 
-        threads.stream().forEach((t) -> {
+        threads.stream().forEach(t -> {
             try {
                 t.join();
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         });

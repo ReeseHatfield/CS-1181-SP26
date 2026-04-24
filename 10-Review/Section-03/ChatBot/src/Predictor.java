@@ -3,19 +3,18 @@ import java.util.*;
 public class Predictor {
     private HashMap<String, ArrayList<String>> map = new HashMap<>();
 
-    public Predictor(String data){
+    public Predictor(String data) {
         ArrayList<String> words = new ArrayList<String>(
-            Arrays.asList(data.trim().split(" "))
-        );
+                Arrays.asList(data.trim().split(" ")));
 
-        for(int i = 0; i < words.size() - 1; i ++){
+        for (int i = 0; i < words.size() - 1; i++) {
             String curWord = words.get(i);
             String nextWord = words.get(i + 1);
 
             // System.out.println("cur word: " + curWord);
             // System.out.println("next word: " + nextWord);
 
-            if(this.map.containsKey(curWord)){
+            if (this.map.containsKey(curWord)) {
                 this.map.get(curWord).add(nextWord);
 
             } else {
@@ -32,7 +31,7 @@ public class Predictor {
         // System.out.println(words);
     }
 
-    public String nextWord(String context){
+    private String nextWord(String context) {
         ArrayList<String> possibleNextWords = this.map.get(context);
 
         Random rng = new Random();
@@ -42,4 +41,35 @@ public class Predictor {
         return possibleNextWords.get(index);
 
     }
+
+    public String getResponse(String input) {
+
+        String userText = input.toLowerCase();
+
+        String[] userWords = userText.trim().split(" ");
+
+        String usableWord = userWords[userWords.length - 1];
+
+        // System.out.println(book);
+        ArrayList<String> fullReply = new ArrayList<>();
+
+        fullReply.add(usableWord);
+        for (int i = 0; i < 20; i++) {
+            String nextWord = this.nextWord(fullReply.getLast());
+            fullReply.add(nextWord);
+        }
+
+        List<String> replyWords = fullReply.subList(1, fullReply.size());
+
+        String replyToSend = "";
+        for (String cur : replyWords) {
+            replyToSend += " " + cur;
+        }
+        replyToSend = replyToSend.trim();
+
+        // System.out.println(replyToSend);
+        return replyToSend;
+
+    }
+
 }
